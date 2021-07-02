@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hr.fer.projekt.smartAgriculture">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.RemoveDeviceFromCultureActivity"></activity>
+
+        <service
+            android:name=".services.NotificationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.CulturesListActivity" />
+        <activity android:name=".activities.LogInActivity" />
+        <activity android:name=".activities.RegisterInActivity" />
+        <activity android:name=".activities.AddNewCultureActivity" />
+        <activity android:name=".activities.CultureDetailsActivity" />
+        <activity android:name=".activities.DevicesListActivity" />
+        <activity android:name=".activities.AddNewDeviceActivity" />
+        <activity android:name=".activities.NotificationsActivity" />
+        <activity android:name=".activities.TasksActivity" />
+        <activity android:name=".activities.SetCultureBoundaries" />
+        <activity android:name=".activities.AddNewTaskActivity" />
+        <activity android:name=".activities.MeasurementsActivity" />
+    </application>
+
+</manifest>
